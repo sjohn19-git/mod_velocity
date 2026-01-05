@@ -10,14 +10,14 @@ import numpy as np
 
 
 #cat = read_events("/Users/sebinjohn/Downloads/combined_events_AK_w_phasehints.xml")
-cat = read_events("/Users/sebinjohn/vel_proj/vmodel_final_clean.xml")
+cat = read_events("/Users/sebinjohn/mod_velocity/vmodel_final_clean.xml")
 
 ###################
 import pandas as pd
 from obspy.clients.fdsn import Client
 
 # === File to cache station metadata ===
-cache_file = "/Users/sebinjohn/vel_proj/station_metadata.csv"
+cache_file = "/Users/sebinjohn/mod_velocity/station_metadata.csv"
 
 # === Check if cached file exists ===
 if os.path.exists(cache_file):
@@ -94,7 +94,7 @@ def extract_stations(file_path):
     return stations
 
 
-file_path = "/Users/sebinjohn/vel_proj/STATION0.HYP"
+file_path = "/Users/sebinjohn/mod_velocity/STATION0.HYP"
 accepted_stas = extract_stations(file_path)
 
 
